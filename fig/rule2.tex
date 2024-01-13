@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+  %before
+  \fanin{(0,0)}{a}
+  \lambdaNode{(0,-1.5)}{b}
+  \draw[thick] (a_bottom) -- (b_lam_top);
+  \draw[thick] (-0.8,0.8) -- (a_white);
+  \draw[thick] (0.8,0.8) -- (a_black);
+  \draw[thick] (-0.8,-2.3) -- (b_lam_l);
+  \draw[thick] (0.8,-2.3) -- (b_lam_r);
+
+  %arrow
+  \draw[thick,->] (1.5,-1) -- (2.5,-1);
+
+  %after
+  \lambdaNode{(4,0)}{c}
+  \lambdaNode{(5.5,0)}{d}
+  \fanin{(4,-1.5)}{e}
+  \fanin{(5.5,-1.5)}{f}
+  \draw[thick] (c_lam_r) -- (f_white);
+  \draw[thick] (d_lam_l) -- (e_black);
+  \draw[thick] (c_lam_l) -- (e_white);
+  \draw[thick] (d_lam_r) -- (f_black);
+  \draw[thick] (c_lam_top) -- (4,0.8);
+  \draw[thick] (d_lam_top) -- (5.5,0.8);
+  \draw[thick] (4,-2.3) -- (e_bottom);
+  \draw[thick] (5.5,-2.3) -- (f_bottom);
+
+\end{tikzpicture}

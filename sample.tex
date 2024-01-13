@@ -1,0 +1,36 @@
+\documentclass[dvipdfmx]{article}
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{xpatch}
+\usepackage{realboxes}
+\usepackage{tcolorbox}
+
+
+\usepackage{ascmac}
+
+\usepackage{sharing-graph-illustration}
+
+
+\title{sample}
+
+\begin{document}
+\begin{itembox}[l]{\textbf{Sample. 1}}
+    \begin{center}
+        \scalebox{1}{\input{fig/rule1.tex}}
+    \end{center}
+    \vspace{1em}
+    \begin{center}
+        \scalebox{1}{\input{fig/rule2.tex}}
+    \end{center}
+    \vspace{1em}
+    \begin{center}
+        \scalebox{1}{\input{fig/rule3.tex}}
+    \end{center}
+    \vspace{1em}
+    \begin{center}
+        \scalebox{1}{\input{fig/rule4.tex}}
+    \end{center}
+\end{itembox}
+
+\end{document}

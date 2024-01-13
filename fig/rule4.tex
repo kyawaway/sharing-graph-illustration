@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+  %before
+  \fanin{(0,0)}{a}
+  \fanout[red!10]{(0,-1.5)}{b}
+  \draw[thick] (a_bottom) -- (b_top);
+  \draw[thick] (-0.8,0.8) -- (a_white);
+  \draw[thick] (0.8,0.8) -- (a_black);
+  \draw[thick] (-0.8,-2.3) -- (b_black);
+  \draw[thick] (0.8,-2.3) -- (b_white);
+
+  %arrow
+  \draw[thick,->] (1.5,-1) -- (2.5,-1);
+
+  %after
+  \draw[thick] (4,0.8) -- (5.5,-2.3);
+  \draw[thick] (5.5,0.8) -- (4,-2.3);
+
+\end{tikzpicture}

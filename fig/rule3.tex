@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+  %before
+  \fanin{(0,0)}{a}
+  \appNode{(0,-1.5)}{b}
+  \draw[thick] (a_bottom) -- (b_app_top);
+  \draw[thick] (-0.8,0.8) -- (a_white);
+  \draw[thick] (0.8,0.8) -- (a_black);
+  \draw[thick] (-0.8,-2.3) -- (b_app_l);
+  \draw[thick] (0.8,-2.3) -- (b_app_r);
+
+  %arrow
+  \draw[thick,->] (1.5,-1) -- (2.5,-1);
+
+  %after
+  \appNode{(4,0)}{c}
+  \appNode{(5.5,0)}{d}
+  \fanin{(4,-1.5)}{e}
+  \fanin{(5.5,-1.5)}{f}
+  \draw[thick] (c_app_r) -- (f_white);
+  \draw[thick] (d_app_l) -- (e_black);
+  \draw[thick] (c_app_l) -- (e_white);
+  \draw[thick] (d_app_r) -- (f_black);
+  \draw[thick] (c_app_top) -- (4,0.8);
+  \draw[thick] (d_app_top) -- (5.5,0.8);
+  \draw[thick] (4,-2.3) -- (e_bottom);
+  \draw[thick] (5.5,-2.3) -- (f_bottom);
+
+\end{tikzpicture}

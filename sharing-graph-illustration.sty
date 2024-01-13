@@ -1,0 +1,88 @@
+\usepackage{tikz}
+
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary{calc}
+
+\newcommand{\fanin}[3][white]{
+  % arg1: Color (default:white).
+  % arg2: Coordinates of center point.
+  % arg3: Identifier. 
+  \begin{scope}
+    % shapes
+    %%%% edges
+    \coordinate (#3_left) at ($#2 + (-0.5,0.3)$);
+    \coordinate (#3_right) at ($#2 + (0.5,0.3)$);
+    \coordinate (bottom) at ($#2 + (0,-0.35)$);
+    
+    \draw[thick, rounded corners=5pt, fill=#1] (#3_left)--(#3_right)--(bottom)--cycle;
+
+    %%%% parts
+    \coordinate (#3_label) at ($#2 + (0,0)$);
+    \coordinate (#3_black) at ($#2 + (0.2,0.3)$);
+    \coordinate (#3_white) at ($#2 + (-0.2,0.3)$);
+    \coordinate (#3_bottom) at ($#2 + (0,-0.27)$);
+
+    %\node at (label) {#3};
+    \node at (#3_black) {$\bullet$};
+
+  \end{scope}
+}
+
+\newcommand{\faninP}[3][white]{
+  \fanin[#1]{#2}{#3}
+  \node at (#3_label) {$+$};
+}
+\newcommand{\faninM}[3][white]{
+  \fanin[#1]{#2}{#3}
+  \node at (#3_label) {$-$};
+}
+
+\newcommand{\fanout}[3][white]{
+  % arg1: Color (default:white).
+  % arg2: Coordinates of center point.
+  % arg3: Identifier. 
+  \begin{scope}
+    % shapes
+    %%%% edges
+    \coordinate (#3_left) at ($#2 + (-0.5,-0.3)$);
+    \coordinate (#3_right) at ($#2 + (0.5,-0.3)$);
+    \coordinate (top) at ($#2 + (0,0.35)$);
+    
+    \draw[thick, rounded corners=5pt, fill=#1] (#3_left)--(#3_right)--(top)--cycle;
+
+    %%%% parts
+    \coordinate (#3_label) at ($#2 + (0,0)$);
+    \coordinate (#3_black) at ($#2 + (-0.2,-0.3)$);
+    \coordinate (#3_white) at ($#2 + (0.2,-0.3)$);
+    \coordinate (#3_top) at ($#2 + (0,0.27)$);
+
+    %\node at (label) {#3};
+    \node at (#3_black) {$\bullet$};
+
+  \end{scope}
+}
+
+\newcommand{\fanoutP}[3][white]{
+  \fanout[#1]{#2}{#3}
+  \node at (#3_label) {$+$};
+}
+
+\newcommand{\fanioutM}[3][white]{
+  \fanout[#1]{#2}{#3}
+  \node at (#3_label) {$-$};
+}
+
+\newcommand{\lambdaNode}[2]{
+  \coordinate (#2_lam_top) at ($#1+(0,0.2)$);
+  \coordinate (#2_lam_l) at ($#1+(-0.2,-0.2)$);
+  \coordinate (#2_lam_r) at ($#1+(0.2,-0.2)$);
+  \node at #1 {\large$\lambda$};
+}
+
+\newcommand{\appNode}[2]{
+  \coordinate (#2_app_top) at ($#1+(0,0.2)$);
+  \coordinate (#2_app_l) at ($#1+(-0.2,-0.2)$);
+  \coordinate (#2_app_r) at ($#1+(0.2,-0.2)$);
+  \node at #1 {\large$@$};
+}
+

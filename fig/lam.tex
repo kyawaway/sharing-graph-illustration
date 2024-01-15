@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  \lambdaNode{(0,0)}{lam1}
+  \lambdaNode{(1,-1)}{lam2}
+  \appNode{(2,-2)}{app1}
+  \appNode{(3,-3)}{app2}
+  \fanout{(-1,-1)}{f}
+  \draw[thick] (lam1_l) -- (f_top);
+  \draw[thick] (lam1_r) -- (lam2_top);
+  \draw[thick] (lam2_r) -- (app1_top);
+  \draw[thick] (app1_r) -- (app2_top);
+  \draw[thick] (f_white) to [out=-45,in=225] (app1_l);
+  \draw[thick] (lam2_l) to [out=225,in=-45] (app2_r);
+  \draw[thick] (f_black) to [out=225,in=225] (app2_l);
+\end{tikzpicture}

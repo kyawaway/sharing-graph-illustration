@@ -1,6 +1,6 @@
 \begin{tikzpicture}
   %before
-  \fanin{(0,0)}{a}
+  \fanin[red!10]{(0,0)}{a}
   \lambdaNode{(0,-1.5)}{b}
   \draw[thick] (a_bottom) -- (b_lam_top);
   \draw[thick] (-0.8,0.8) -- (a_white);
@@ -14,8 +14,8 @@
   %after
   \lambdaNode{(4,0)}{c}
   \lambdaNode{(5.5,0)}{d}
-  \fanin{(4,-1.5)}{e}
-  \fanin{(5.5,-1.5)}{f}
+  \fanin[red!10]{(4,-1.5)}{e}
+  \fanin[red!10]{(5.5,-1.5)}{f}
   \draw[thick] (c_lam_r) -- (f_white);
   \draw[thick] (d_lam_l) -- (e_black);
   \draw[thick] (c_lam_l) -- (e_white);

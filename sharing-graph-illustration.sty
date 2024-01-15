@@ -73,16 +73,16 @@
 }
 
 \newcommand{\lambdaNode}[2]{
-  \coordinate (#2_lam_top) at ($#1+(0,0.2)$);
-  \coordinate (#2_lam_l) at ($#1+(-0.2,-0.2)$);
-  \coordinate (#2_lam_r) at ($#1+(0.2,-0.2)$);
+  \coordinate (#2_top) at ($#1+(0,0.2)$);
+  \coordinate (#2_l) at ($#1+(-0.2,-0.2)$);
+  \coordinate (#2_r) at ($#1+(0.2,-0.2)$);
   \node at #1 {\large$\lambda$};
 }
 
 \newcommand{\appNode}[2]{
-  \coordinate (#2_app_top) at ($#1+(0,0.2)$);
-  \coordinate (#2_app_l) at ($#1+(-0.2,-0.2)$);
-  \coordinate (#2_app_r) at ($#1+(0.2,-0.2)$);
+  \coordinate (#2_top) at ($#1+(0,0.2)$);
+  \coordinate (#2_l) at ($#1+(-0.2,-0.2)$);
+  \coordinate (#2_r) at ($#1+(0.2,-0.2)$);
   \node at #1 {\large$@$};
 }
 
